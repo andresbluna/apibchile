@@ -1,6 +1,7 @@
 package com.example.apibchile.controller;
 
 import com.example.apibchile.model.IndicatorData;
+import com.example.apibchile.model.UfDetail;
 import com.example.apibchile.service.IndicatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,5 +17,10 @@ public class IndicatorController {
     @GetMapping("/indicators")
     public IndicatorData getIndicators() {
         return indicatorService.getIndicators();
+    }
+
+    @GetMapping("/uf")
+    public UfDetail getUfData() {
+        return indicatorService.getUfData();
     }
 }
